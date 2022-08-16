@@ -12,6 +12,7 @@ import RenderingList from './components/RenderingList';
 import ComponentDidMount from './components/ComponentDidMount';
 import ComponentDidUpdate from './components/ComponentDidUpdate';
 import ComponentWillUnmount from './components/ComponentWillUnmount';
+import ControlledForm from './components/ControlledForm';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <ComponentDidMount/>
       <ComponentDidUpdate/>
       <ComponentWillUnmount/>
+      <ControlledForm/>
 
     </div>
   );

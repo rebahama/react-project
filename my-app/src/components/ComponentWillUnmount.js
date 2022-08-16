@@ -5,10 +5,9 @@ export class ComponentWillUnmount extends Component {
     return (
       <div>
 
-        Unmount
+        
       </div>
     )
   }
 }
-
 export default ComponentWillUnmount
