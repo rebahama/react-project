@@ -9,6 +9,10 @@ import ConditionalRenderingFunctional from './components/ConditionalRenderingFun
 import NestingCompClass from './components/NestingCompClass';
 import MethodParentClass from './components/MethodParentClass';
 import RenderingList from './components/RenderingList';
+import ComponentDidMount from './components/ComponentDidMount';
+import ComponentDidUpdate from './components/ComponentDidUpdate';
+import ComponentWillUnmount from './components/ComponentWillUnmount';
+
 
 function App() {
   return (
@@ -23,6 +27,9 @@ function App() {
       <NestingCompClass/>
       <MethodParentClass/>
       <RenderingList/>
+      <ComponentDidMount/>
+      <ComponentDidUpdate/>
+      <ComponentWillUnmount/>
 
     </div>
   );
