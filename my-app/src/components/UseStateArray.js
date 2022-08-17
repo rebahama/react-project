@@ -1,9 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
+
 
 function UseStateArray() {
-  return (
-    <div>UseStateArray</div>
-  )
+    const [nums, setNums] = useState([1, 2, 3]);
+    const addNums=()=>{
+        setNums([...nums, nums.length + 1]);
+    }
+    const removeNum = () => {
+        setNums(
+            nums.filter((item, idx) => {
+                return idx !== nums.length - 1;
+            })
+        )
+    }
+
+    return (
+        <div>
+            <button onClick={removeNum}> Remove number </button>
+            <button onClick={addNums}> Add number </button>
+            <ul>
+                {nums.map(num => <li key={num}>{num} </li>)}
+           </ul>
+        </div>
+    )
 }
 
 export default UseStateArray
