@@ -1,48 +1,34 @@
 import React, { Component } from 'react'
 
-export class ControlledForm extends Component {
+export class UnControlledForm extends Component {
     constructor(props) {
         super(props)
-    
-        this.state = {
-             name: '',
-             category: 'website',
-             comments: '',
-        }
+        this.inputName=React.createRef();
+        this.Category=React.createRef();
+        this.Comments=React.createRef();
     }
-    handleNameChange = (event) => {
-        this.setState({
-            name: event.target.value
-        })
-    }
-    handleCategoryChange = (event) => {
-        this.setState({
-            category: event.target.value
-        })
-    }
-    handleCommentsChange = (event) => {
-        this.setState({
-            comments: event.target.value
-        })
-    }
+
+
     handleSubmit = (event) => {
+        console.log(this.inputName.current.value)
         event.preventDefault();
-        console.log(this.state)
+
     }
     render() {
         return (
             <div>
-                <h1> Controlled form</h1>
+                <hr/>
+                <h1> Uncontrolled form</h1>
                 <h2>Please fill out the form below:</h2>
                 <form onSubmit={this.handleSubmit}>
                     <div>
                         <label htmlFor="id-name">Your Name:</label>
                         <input
-                            value={this.state.name}
-                            onChange={this.handleNameChange}
                             id="id-name"
                             name="name"
                             type="text"
+                            defaultValue="John doe"
+                            ref={this.inputName}
                         />
                     </div>
                     <div>
@@ -50,8 +36,7 @@ export class ControlledForm extends Component {
                         <select
                             id="id-category"
                             name="category"
-                            value={this.state.category}
-                            onChange={this.handleCategoryChange}
+                            ref={this.Category}
                         >
                             <option value="website">Website issue</option>
                             <option value="order">Order issue</option>
@@ -64,8 +49,7 @@ export class ControlledForm extends Component {
                         <textarea
                             id="id-comments"
                             name="comments"
-                            value={this.state.comments}
-                            onChange={this.handleCommentsChange}
+                            ref={this.Comments}
                         />
                     </div>
                     <input type="submit" value="Submit" />
@@ -75,4 +59,4 @@ export class ControlledForm extends Component {
     }
 }
 
-export default ControlledForm
+export default UnControlledForm

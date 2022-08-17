@@ -13,6 +13,9 @@ import ComponentDidMount from './components/ComponentDidMount';
 import ComponentDidUpdate from './components/ComponentDidUpdate';
 import ComponentWillUnmount from './components/ComponentWillUnmount';
 import ControlledForm from './components/ControlledForm';
+import UnControlledForm from './components/UnControlledForm';
+import ControlledFormHookState from './components/ControlledFormHooksState';
+import UseStateArray from './components/UseStateArray';
 
 
 function App() {
@@ -32,6 +35,9 @@ function App() {
       <ComponentDidUpdate/>
       <ComponentWillUnmount/>
       <ControlledForm/>
+      <UnControlledForm/>
+      <ControlledFormHookState/>
+      <UseStateArray/>
 
     </div>
   );
