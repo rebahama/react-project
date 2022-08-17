@@ -17,6 +17,7 @@ import UnControlledForm from './components/UnControlledForm';
 import ControlledFormHookState from './components/ControlledFormHooksState';
 import UseStateArray from './components/UseStateArray';
 import HooksCounter from './components/HooksCounter';
+import AddNumber from './components/AddNumber';
 
 
 function App() {
@@ -39,7 +40,9 @@ function App() {
       <UnControlledForm/>
       <ControlledFormHookState/>
       <UseStateArray/>
-      < HooksCounter/>
+      <HooksCounter/>
+      <AddNumber/>
+
     </div>
   );
 }

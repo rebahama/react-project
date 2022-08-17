@@ -45,7 +45,10 @@ function ControlledFormHooksState() {
                         id="id-comments"
                         name="comments"
                         value={comments}
-                        onChange={(e)=> setComments(e.target.value)}
+                        onChange={(e)=>
+                             setComments
+                            (e.target.value)
+                        }
                     />
                 </div>
                 <input type="submit" value="Submit" />
