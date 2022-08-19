@@ -19,6 +19,10 @@ import UseStateArray from './components/UseStateArray';
 import HooksCounter from './components/HooksCounter';
 import AddNumber from './components/AddNumber';
 import UseEffectCounterContainer from './components/UseEffectCounterContainer';
+import ClassHttp from './components/ClassHttp';
+import ClassHttpPost from './components/ClassHttpPost';
+import HttpHooks from './components/HttpHooks';
+
 
 
 function App() {
@@ -44,6 +48,10 @@ function App() {
       <HooksCounter name="john doe"/>
       <AddNumber/>
       <UseEffectCounterContainer/>
+      <ClassHttp/>
+      <ClassHttpPost/>
+      <HttpHooks/>
+
 
     </div>
   );
